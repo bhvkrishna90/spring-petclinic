@@ -16,7 +16,7 @@ pipeline{
                     echo "========Source code failed to clone ========"
                 }
             }
-        },
+        }
         stage(sonarqubeAnalysis){
             steps{
                 echo "========Analysing SonarScannerReport========"
