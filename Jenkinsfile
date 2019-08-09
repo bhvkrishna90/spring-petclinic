@@ -28,7 +28,7 @@ pipeline{
             steps{
                 figlet "Static code Analysis"
                 echo "========Analysing SonarScannerReport========"
-                def scannerHome = tool 'SSonarqube'
+                def scannerHome = tool 'Sonarqube'
                 withSonarQubeEnv('SonarQube') {
                     sh "${scannerHome}/bin/sonar-scanner"
                 }
