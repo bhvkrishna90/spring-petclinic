@@ -17,6 +17,11 @@ pipeline{
                 }
             }
         }
+        stage(sonarqubeAnalysis){
+            steps{
+                echo "========Analysing SonarScannerReport========"
+            }
+        }
     }
 }
  
