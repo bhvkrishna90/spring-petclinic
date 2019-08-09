@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("SCM Checkout"){
             steps{
-                echo "========Cloning GitHUb repository========",
+                echo "========Cloning GitHUb repository========"
                 },
             post{
                 always{
