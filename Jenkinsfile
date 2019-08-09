@@ -3,6 +3,7 @@ pipeline{
     stages{
         stage("SendNotifications"){
             steps{
+                echo ${env.JOB_STATUS}
                 office365ConnectorSend color: 'Green', message: '${env.JOB_STATUS} ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)', status: '${env.JOB_STATUS}', webhookUrl: '${env.TeamsWebhook}'
             }
         }
