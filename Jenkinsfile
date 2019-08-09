@@ -4,7 +4,7 @@ pipeline{
         stage("SCM Checkout"){
             steps{
                 echo "========Cloning GitHUb repository========",
-                }
+                },
             post{
                 always{
                     echo "========always========"
@@ -16,7 +16,7 @@ pipeline{
                     echo "========Source code failed to clone ========"
                 }
             }
-        }
+        },
         stage(sonarqubeAnalysis){
             steps{
                 echo "========Analysing SonarScannerReport========"
